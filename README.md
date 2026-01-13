@@ -58,25 +58,15 @@ serves as the primary evaluation artifact.
 
 ## 🗂️ Project Structure
 amazon-recommendation-project/
-
 │
-
 ├── notebook/
-
 │   └── amazon_recommendation_system.ipynb
-
 │
-
 ├── data/
-
 │   └── raw/   (not uploaded – contains Kaggle CSV files)
-
 │
-
 ├── README.md
-
 └── .gitignore
-
 ---
 
 ## ▶️ How to Run the Project (VS Code – Local)
