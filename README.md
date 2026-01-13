@@ -67,6 +67,7 @@ amazon-recommendation-project/
 │
 ├── README.md
 └── .gitignore
+
 ---
 
 ## ▶️ How to Run the Project (VS Code – Local)
