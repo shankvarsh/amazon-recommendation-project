@@ -1,62 +1,155 @@
-# AI-Driven Product Recommendation System  
-### Module E – AI for Market Trend Analysis
+# AI-Driven Product Recommendation & Market Trend Analysis
 
 ## 📌 Project Overview
-This project implements an end-to-end AI-driven product recommendation and
-customer analytics system inspired by real-world e-commerce platforms such as Amazon.
+This project presents an end-to-end **AI-driven Product Recommendation System**
+built using a large-scale Amazon Products dataset (2023).
 
-The system analyzes large-scale product data, simulates customer behavior,
-segments users using marketing analytics techniques, and generates personalized
-product recommendations.
+The system combines:
+- Market trend analysis
+- Customer behavior modeling
+- Sentiment analysis (NLP)
+- Emotion-aware customer segmentation
+- Personalized product recommendations
 
-The primary objective of this project is to demonstrate the complete AI project
-lifecycle, including data understanding, exploratory analysis, modeling,
-evaluation, and documentation.
-
----
-
-## 🎯 Key Features
-- Large-scale data processing (1.1M+ Amazon products)
-- Exploratory Data Analysis (Market Trend Analysis)
-- Synthetic customer and transaction simulation (100,000 users)
-- RFM-based customer segmentation
-- Cohort analysis for customer retention trends
-- Hybrid recommendation system:
-  - Popularity-based recommendations
-  - Category-based personalization
-  - Upselling for high-value customers
-- Explainable and interpretable logic (no black-box models)
+The project is designed as part of **Module E – AI Applications (Individual Open Project)**  
+and demonstrates the **complete AI project lifecycle**, from data understanding to
+actionable business insights.
 
 ---
 
-## 📂 Dataset
-**Amazon Products Dataset (2023)**  
-Source: Kaggle  
-🔗 https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset
-
-> ⚠️ Note:  
-> Due to GitHub file size limitations, raw dataset files are not uploaded to this
-> repository. The dataset must be downloaded separately from Kaggle.
-
----
-
-## 🧠 Methodology
-The project follows a structured AI workflow:
-
-1. Data Loading & Cleaning  
-2. Exploratory Data Analysis (EDA)  
-3. Synthetic User & Purchase History Generation  
-4. RFM Analysis & Customer Segmentation  
-5. Cohort Analysis (Retention Trends)  
-6. Hybrid Recommendation System  
-7. Ethical Considerations & Future Scope  
-
-All steps are implemented and explained in a **single Jupyter Notebook**, which
-serves as the primary evaluation artifact.
+## 🎯 Objectives
+- Perform exploratory market trend analysis on Amazon product data
+- Simulate realistic customer purchase behavior
+- Segment customers using **RFM Analysis** and **Cohort Analysis**
+- Integrate **sentiment analysis** to capture emotional feedback
+- Build a **hybrid recommendation system** with upselling and cross-selling logic
+- Ensure explainability, ethics, and reproducibility
 
 ---
 
-## 🗂️ Project Structure
+## 📊 Dataset
+- **Source:** Amazon Products Dataset (Kaggle, 2023)  
+- **Link:** https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset  
+
+### Dataset Characteristics
+- ~1.1 million product records
+- 140+ product category CSV files
+- Includes product name, category, pricing, ratings, and review counts
+
+⚠️ **Note:**  
+The dataset does not include customer-level purchase history or review text.  
+Therefore, **synthetic users, transactions, and review texts** were generated
+for academic and analytical purposes.
+
+Due to GitHub file size limits, **raw datasets are not uploaded** to this repository.
+
+---
+
+## 🧠 Project Methodology
+
+### 1️⃣ Data Understanding & Cleaning
+- Combined 140+ CSV files into a single dataset
+- Removed irrelevant columns
+- Converted prices and ratings to numeric format
+- Handled missing values using business logic
+
+### 2️⃣ Exploratory Data Analysis (Market Trends)
+- Category-wise product distribution
+- Price distribution analysis
+- Ratings and popularity trends
+- Identification of dominant product categories
+
+### 3️⃣ Synthetic User & Transaction Generation
+- Simulated **100,000 unique users**
+- Generated **1,000,000 purchase transactions** for the year 2023
+- Created realistic purchase dates, quantities, and spending behavior
+
+### 4️⃣ RFM Analysis (Customer Segmentation)
+Customers were segmented based on:
+- **Recency** (days since last purchase)
+- **Frequency** (number of purchases)
+- **Monetary value** (total spend)
+
+Segments include:
+- Big Spenders
+- Loyal Customers
+- At-Risk Customers
+- Regular Customers
+
+### 5️⃣ Cohort Analysis
+- Grouped users by first purchase month
+- Analyzed retention trends over time
+- Visualized customer retention using heatmaps
+
+### 6️⃣ Sentiment Analysis (NLP)
+- Generated synthetic review text based on ratings
+- Applied **VADER Sentiment Analysis**
+- Classified sentiment as Positive, Neutral, or Negative
+- Analyzed sentiment trends across product categories
+
+### 7️⃣ Emotional Loyalty Modeling (Novel Contribution)
+A new **Emotional Loyalty Score** was introduced by combining:
+- RFM scores
+- Average sentiment score per user
+
+This enabled identification of:
+- Emotionally Loyal Customers
+- High-Value but Unhappy Customers
+- Emotionally Disengaged Customers
+
+### 8️⃣ Recommendation System
+A **hybrid recommendation engine** was built:
+- New users → Popular products
+- Returning users → Category-based recommendations
+- Big spenders → Premium upsell recommendations
+- Emotion-aware recommendations using sentiment + RFM
+
+---
+
+## 📈 Key Results
+- Successfully processed over **1.1 million products**
+- Generated **large-scale synthetic customer data**
+- Identified meaningful customer segments and retention patterns
+- Built a **sentiment-aware recommendation system**
+- Provided explainable, business-ready insights
+
+---
+
+## ⚖️ Ethical Considerations
+- No real user data was used; all customer data is synthetic
+- Sentiment analysis is based on simulated review text
+- Popularity and emotional bias are acknowledged and documented
+- The system is intended strictly for academic and educational use
+
+---
+
+## 🚧 Limitations
+- Synthetic data may not fully capture real-world intent
+- Rule-based recommendation logic (no deep embeddings)
+- No real-time user feedback loop
+- Sentiment analysis does not capture sarcasm or complex language
+
+---
+
+## 🔮 Future Scope
+- Integrate real transaction or clickstream data
+- Apply collaborative filtering or deep learning models
+- Use transformer-based sentiment models (BERT)
+- Build interactive dashboards using Streamlit
+- Explore reinforcement learning for dynamic recommendations
+
+---
+
+## 🛠️ Tech Stack
+- **Language:** Python
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn
+- **NLP:** VADER Sentiment Analysis
+- **Environment:** VS Code, Jupyter Notebook
+- **Version Control:** Git & GitHub
+
+---
+
+## 📁 Repository Structure
 amazon-recommendation-project/
 
 │
@@ -69,7 +162,7 @@ amazon-recommendation-project/
 
 ├── data/
 
-│   └── raw/   (not uploaded – contains Kaggle CSV files)
+│   └── raw/   (ignored in GitHub)
 
 │
 
@@ -79,40 +172,22 @@ amazon-recommendation-project/
 
 ---
 
-## ▶️ How to Run the Project (VS Code – Local)
-
-1. Clone the repository: git clone https://github.com//amazon-recommendation-project.git
-2. Download the dataset from Kaggle and place all CSV files inside:data/raw/
-3. Open the project folder in **VS Code**
-4. Open the notebook:notebook/amazon_recommendation_system.ipynb
-5. Run the notebook **top to bottom** using Python 3
-
----
-
-## ⚖️ Ethical Considerations
-- No real user data is used
-- All customer data is synthetically generated to preserve privacy
-- Recommendations may reflect popularity bias
-- The system is built strictly for academic and analytical purposes
+## ✅ How to Run
+1. Clone the repository
+2. Download the dataset from Kaggle (link above)
+3. Place CSV files inside `data/raw/`
+4. Open `amazon_recommendation_system.ipynb`
+5. Run all cells top-to-bottom
 
 ---
 
-## 🚀 Future Enhancements
-- Integration of real user interaction data
-- NLP-based sentiment analysis on product reviews
-- Collaborative filtering or deep learning-based recommender models
-- Interactive dashboard using Streamlit or similar tools
+## 📌 Author
+**Individual Academic Project**  
+Module E – AI Applications  
 
 ---
 
-## 📌 Course Information
-**Module:** AI Applications – Module E  
-**Project Type:** Individual Open Project  
-**Focus Area:** AI for Market Trend Analysis
-
----
-
-## ✅ Author
-**Name:** G R Shankavi Varsha
-
-**Institution:** IIT Ropar (Minor in AI)
+## ⭐ Final Note
+This project demonstrates how **AI, analytics, and NLP** can be combined
+to build intelligent, explainable, and business-relevant systems,
+even when working with incomplete real-world data.
