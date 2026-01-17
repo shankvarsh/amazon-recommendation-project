@@ -47,24 +47,24 @@ Due to GitHub file size limits, **raw datasets are not uploaded** to this reposi
 
 ## 🧠 Project Methodology
 
-### 1️⃣ Data Understanding & Cleaning
+### Data Understanding & Cleaning
 - Combined 140+ CSV files into a single dataset
 - Removed irrelevant columns
 - Converted prices and ratings to numeric format
 - Handled missing values using business logic
 
-### 2️⃣ Exploratory Data Analysis (Market Trends)
+### Exploratory Data Analysis (Market Trends)
 - Category-wise product distribution
 - Price distribution analysis
 - Ratings and popularity trends
 - Identification of dominant product categories
 
-### 3️⃣ Synthetic User & Transaction Generation
+### Synthetic User & Transaction Generation
 - Simulated **100,000 unique users**
 - Generated **1,000,000 purchase transactions** for the year 2023
 - Created realistic purchase dates, quantities, and spending behavior
 
-### 4️⃣ RFM Analysis (Customer Segmentation)
+### RFM Analysis (Customer Segmentation)
 Customers were segmented based on:
 - **Recency** (days since last purchase)
 - **Frequency** (number of purchases)
@@ -76,18 +76,18 @@ Segments include:
 - At-Risk Customers
 - Regular Customers
 
-### 5️⃣ Cohort Analysis
+### Cohort Analysis
 - Grouped users by first purchase month
 - Analyzed retention trends over time
 - Visualized customer retention using heatmaps
 
-### 6️⃣ Sentiment Analysis (NLP)
+### Sentiment Analysis (NLP)
 - Generated synthetic review text based on ratings
 - Applied **VADER Sentiment Analysis**
 - Classified sentiment as Positive, Neutral, or Negative
 - Analyzed sentiment trends across product categories
 
-### 7️⃣ Emotional Loyalty Modeling (Novel Contribution)
+### Emotional Loyalty Modeling (Novel Contribution)
 A new **Emotional Loyalty Score** was introduced by combining:
 - RFM scores
 - Average sentiment score per user
@@ -97,7 +97,7 @@ This enabled identification of:
 - High-Value but Unhappy Customers
 - Emotionally Disengaged Customers
 
-### 8️⃣ Recommendation System
+### Recommendation System
 A **hybrid recommendation engine** was built:
 - New users → Popular products
 - Returning users → Category-based recommendations
