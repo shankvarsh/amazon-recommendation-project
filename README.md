@@ -182,8 +182,7 @@ amazon-recommendation-project/
 ---
 
 ## 📌 Author
-**Individual Academic Project**  
-Module E – AI Applications  
+G R Shankavi Varsha 
 
 ---
 
